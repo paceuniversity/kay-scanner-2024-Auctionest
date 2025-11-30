@@ -119,7 +119,9 @@ public class TokenStream {
 					t.setValue("||");
 					nextChar = readChar();
 					return t;
-				} 
+				} else{
+					t.setType("Other");
+				}
 				return t;
 			case '&':
 				// Look for &&
@@ -276,4 +278,5 @@ public class TokenStream {
 	}
 
 }
+
 
